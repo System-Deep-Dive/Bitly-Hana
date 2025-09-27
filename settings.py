@@ -1,13 +1,13 @@
 """애플리케이션 설정"""
 
 # URL 단축 전략 설정
-DEFAULT_STRATEGY = "FULLSCAN"  # FULLSCAN, INDEXED, APP_CACHE, REDIS 중 선택
+DEFAULT_STRATEGY = "INDEXED"  # FULLSCAN, INDEXED, APP_CACHE, REDIS 중 선택
 
 # 지원되는 전략들
 AVAILABLE_STRATEGIES = {
     "FULLSCAN": "strategy.fullscan.FullScanStrategy",
-    # 향후 추가될 전략들 (2, 3, 4단계에서 구현)
-    # "INDEXED": "strategy.indexed.IndexedStrategy",
+    "INDEXED": "strategy.indexed.IndexedStrategy",
+    # 향후 추가될 전략들 (3, 4단계에서 구현)
     # "APP_CACHE": "strategy.app_cache.AppCacheStrategy", 
     # "REDIS": "strategy.redis_strategy.RedisStrategy",
 }
