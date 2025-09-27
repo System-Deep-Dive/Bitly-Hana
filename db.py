@@ -16,8 +16,8 @@ def _load_sql_for_strategy(strategy_name: str) -> str:
     sql_dir = Path(__file__).parent / "sql"
     if strategy_name == "FULLSCAN":
         return (sql_dir / "v1_init.sql").read_text(encoding="utf-8")
-    elif strategy_name == "INDEXED":
-        # V1 스키마 + V2 인덱스 적용
+    elif strategy_name in ["INDEXED", "APP_CACHE"]:
+        # V1 스키마 + V2 인덱스 적용 (APP_CACHE도 INDEXED와 동일한 스키마 사용)
         v1 = (sql_dir / "v1_init.sql").read_text(encoding="utf-8")
         v2 = (sql_dir / "v2_add_index.sql").read_text(encoding="utf-8")
         return v1 + "\n" + v2

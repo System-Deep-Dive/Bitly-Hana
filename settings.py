@@ -7,8 +7,8 @@ DEFAULT_STRATEGY = "INDEXED"  # FULLSCAN, INDEXED, APP_CACHE, REDIS 중 선택
 AVAILABLE_STRATEGIES = {
     "FULLSCAN": "strategy.fullscan.FullScanStrategy",
     "INDEXED": "strategy.indexed.IndexedStrategy",
-    # 향후 추가될 전략들 (3, 4단계에서 구현)
-    # "APP_CACHE": "strategy.app_cache.AppCacheStrategy", 
+    "APP_CACHE": "strategy.app_cache.AppCacheStrategy",
+    # 향후 추가될 전략들 (4단계에서 구현)
     # "REDIS": "strategy.redis_strategy.RedisStrategy",
 }
 
